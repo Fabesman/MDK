@@ -1,0 +1,17 @@
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\bin\x64\Test\netcoreapp3.1\WinFormsApp1.exe
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\bin\x64\Test\netcoreapp3.1\WinFormsApp1.deps.json
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\bin\x64\Test\netcoreapp3.1\WinFormsApp1.runtimeconfig.json
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\bin\x64\Test\netcoreapp3.1\WinFormsApp1.runtimeconfig.dev.json
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\bin\x64\Test\netcoreapp3.1\WinFormsApp1.dll
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\bin\x64\Test\netcoreapp3.1\WinFormsApp1.pdb
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.csproj.AssemblyReference.cache
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.Form1.resources
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.Form2.resources
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.csproj.GenerateResource.cache
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.AssemblyInfoInputs.cache
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.AssemblyInfo.cs
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.csproj.CoreCompileInputs.cache
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.dll
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.pdb
+E:\Мдк 2.1\хз\WinFormsApp1\WinFormsApp1\obj\x64\Test\netcoreapp3.1\WinFormsApp1.genruntimeconfig.cache
