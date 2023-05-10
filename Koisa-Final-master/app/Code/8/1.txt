@@ -1,0 +1,117 @@
+Console.WriteLine("Введите количество элементов массива: ");
+int n = int.Parse(Console.ReadLine());
+int[] m = new int[n];
+for (int i = 0; i < n; i++)
+{
+    m[i] = int.Parse(Console.ReadLine());
+}
+Console.WriteLine("Введите способ сортировки от 1 до 3");
+int sort = int.Parse(Console.ReadLine());
+
+if (sort == 1)
+{
+
+    Console.WriteLine("Сортировка вставкой.");
+    int cur;
+    int j;
+    for (int i = 1; i < m.Length; i++)
+    {
+        cur = m[i];
+        j = i;
+        while ((j > 0) && (cur < m[j - 1]))
+        {
+            m[j] = m[j - 1];
+            j--;
+        }
+        m[j] = cur;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        Console.WriteLine(m[i]);
+    }
+
+}
+if (sort == 2)
+{
+    Console.WriteLine("Сортировка выбором.");
+    int indx;
+    for (int i = 0; i < m.Length; i++)
+    {
+        indx = i;
+        for (int j = i; j < m.Length; j++)
+        {
+            if (m[j] < m[indx])
+            {
+                indx = j;
+            }
+        }
+        if (m[indx] == m[i])
+
+            continue;
+
+        int temp = m[i];
+        m[i] = m[indx];
+        m[indx] = temp;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        Console.WriteLine(m[i]);
+    }
+
+}
+else if (sort == 3)
+{
+
+
+    Console.WriteLine("Сортировка обменом (“пузырьковая сортировка”)");
+    int temp;
+    for (int i = 0; i < m.Length; i++)
+    {
+        for (int j = i + 1; j < m.Length; j++)
+        {
+            if (m[i] > m[j])
+            {
+                temp = m[i];
+                m[i] = m[j];
+                m[j] = temp;
+            }
+        }
+    }
+
+
+
+    for (int i = 0; i < n; i++)
+    {
+        Console.WriteLine(m[i]);
+    }
+}
+Console.WriteLine("Поиск");
+int value = int.Parse(Console.ReadLine());
+int low = 0;
+int high = m.Length - 1;
+int mid;
+
+while (low <= high)
+{
+    mid = (low + high) / 2;
+    if (m[mid] == value)
+    {
+        Console.WriteLine("Элемент найден на позиции {0}", mid);
+        break;
+    }
+    else if (m[mid] < value)
+    {
+        low = mid + 1;
+    }
+    else
+    {
+        high = mid - 1;
+    }
+}
+if (low > high)
+{
+    Console.WriteLine("Элемент не найден в массиве");
+}
+Console.ReadKey();

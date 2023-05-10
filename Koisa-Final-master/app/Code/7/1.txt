@@ -1,0 +1,124 @@
+int M = 5;
+int B = 3;
+int[] arr = { 1, 2, 3, 4, 5 };
+int[,] matrix = new int[M, B];
+Console.WriteLine("Задание 1");
+for (int j = 0; j < B; j++)
+{
+    for (int i = 0; i < M; i++)
+    {
+        matrix[i, j] = arr[i];
+    }
+}
+
+for (int i = 0; i < M; i++)
+{
+    for (int j = 0; j < B; j++)
+    {
+        Console.Write(matrix[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.ReadKey();
+Console.WriteLine();
+Console.WriteLine("Задание 2");
+
+int[,] array = new int[5, 5];
+
+Random random = new Random();
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 5; j++)
+    {
+        array[i, j] = random.Next(-2, 6);
+        Console.Write(array[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+
+int sum = 0;
+for (int i = 0; i < 5; i++)
+{
+    bool containsNegative = false;
+    for (int j = 0; j < 5; j++)
+    {
+        if (array[i, j] < 0)
+        {
+            containsNegative = true;
+            break;
+        }
+    }
+    if (!containsNegative)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            sum += array[i, j];
+        }
+    }
+}
+
+Console.WriteLine(sum);
+Console.ReadKey();
+Console.WriteLine("Задание 3");
+
+int N = 5;
+int[,] A = new int[N, N];
+Random rnd = new Random();
+for (int i = 0; i < N; i++)
+{
+    for (int j = 0; j < N; j++)
+    {
+        A[i, j] = rnd.Next(-10, 11);
+    }
+}
+Console.WriteLine();
+for (int i = 0; i < N; i++)
+{
+    for (int j = 0; j < N; j++)
+    {
+        Console.Write(A[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+for (int i = 0; i < N; i++)
+{
+    for (int j = 0; j < N; j++)
+    {
+        if (A[i, j] < 0)
+        {
+            A[i, j] = 0;
+        }
+        else
+        {
+            A[i, j] = 1;
+        }
+    }
+}
+Console.WriteLine();
+for (int i = 0; i < N; i++)
+{
+    for (int j = 0; j < N; j++)
+    {
+        Console.Write(A[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+Console.WriteLine("Нижняя треугольная матрица:");
+for (int i = 0; i < N; i++)
+{
+    for (int j = 0; j < N; j++)
+    {
+        if (j <= i)
+        {
+            Console.Write(A[i, j] + " ");
+        }
+        else
+        {
+            Console.Write("  ");
+        }
+    }
+    Console.WriteLine();
+}
+Console.ReadKey();

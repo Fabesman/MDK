@@ -1,0 +1,12 @@
+int a=0, b=0, s=0, i;
+Console.WriteLine("Введите число А: ");
+a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число B: ");
+b = int.Parse(Console.ReadLine());
+for(i = a; i <= b; i++)
+{
+    a++;
+    s += i * i;
+    a++;
+}
+Console.WriteLine($"Сумма квадратов равна = {s}");

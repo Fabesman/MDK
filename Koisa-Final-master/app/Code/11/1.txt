@@ -1,0 +1,49 @@
+Console.WriteLine("Задание 1");
+string inputString = "Дан символ. Определить и вывести слова, в которых встречается этот символ, и номер позиции, в которой он размещен в слове в первый раз.";
+Console.WriteLine(inputString);
+Console.WriteLine("Введите символ");
+string symbol = Console.ReadLine();
+string[] words = inputString.Split(new[] { ".", "!", "?", " ", "," }, StringSplitOptions.RemoveEmptyEntries);
+
+foreach (string word in words)
+{
+    int position = word.IndexOf(symbol);
+
+    if (position != -1)
+    {
+        Console.WriteLine($"Слово '{word}' содержит символ '{symbol}' в позиции {position + 1}.");
+    }
+}
+Console.ReadKey();
+Console.WriteLine("Задание 2");
+Console.WriteLine("Введите размерность масива");
+int N =int.Parse(Console.ReadLine());
+int M = int.Parse(Console.ReadLine());
+int[,] matrix = new int[N, M];
+double[] P = new double[N];
+Random random = new Random();
+for (int i = 0; i < N; i++)
+{
+    for (int j = 0; j < M; j++)
+    {
+        matrix[i, j] = random.Next(0, 10);
+    }
+}
+
+
+for (int i = 0; i < N; i++)
+{
+    double sum = 0;
+    for (int j = 0; j < M; j++)
+    {
+        sum += matrix[i, j];
+    }
+    P[i] = sum / M;
+}
+
+
+for (int i = 0; i < N; i++)
+{
+    Console.WriteLine($"P[{i}] = {P[i]}" );
+}
+Console.ReadKey();

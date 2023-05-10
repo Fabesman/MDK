@@ -1,0 +1,28 @@
+Console.WriteLine("Задание 1");
+Console.Write("Введите строку: ");
+string s = Console.ReadLine();
+int count = 0;
+foreach (char c in s)
+{
+    if (char.IsPunctuation(c))
+    {
+        count++;
+    }
+}
+Console.WriteLine("В строке {0} знаков препинания", count);
+Console.ReadKey();
+Console.WriteLine();
+Console.WriteLine("Введите строку S:");
+string S = Console.ReadLine();
+
+Console.WriteLine("Введите символ A:");
+char A = Console.ReadKey().KeyChar;
+
+Console.WriteLine("\nВведите строку S1:");
+string S1 = Console.ReadLine();
+
+string S2 = S.Replace(A.ToString(), S1);
+
+Console.WriteLine("\nРезультат замены:");
+Console.WriteLine(S2);
+Console.ReadKey();

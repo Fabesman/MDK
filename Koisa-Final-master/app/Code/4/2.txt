@@ -1,0 +1,19 @@
+int b = 0, m = 0, n, i;
+Console.WriteLine("Введите N: ");
+n=int.Parse(Console.ReadLine());
+int[] a = new int[5] { 1, 7, 6, 5, 0 };
+for(i = 0; i < n; i++)
+{
+    if (a[i] != 0)
+    {
+        m+=a[i];
+    }
+
+    if (a[i] < 2)
+    {
+        b++;
+    }
+}
+
+Console.WriteLine($"Сумма найденных чисел = {m} а их количество  {b}");
+Console.ReadKey();

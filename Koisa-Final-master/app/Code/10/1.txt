@@ -1,0 +1,26 @@
+Console.WriteLine("Введите строку:");
+string строка = Console.ReadLine();
+Console.WriteLine("Введите номер слова:");
+int n = int.Parse(Console.ReadLine());
+
+string[] words = строка.Split(' ');
+
+if (n > words.Length)
+{
+    Console.WriteLine("Номер слова больше количества слов в предложении!");
+    return;
+}
+
+string targetWord = words[n - 1];
+int targetLength = targetWord.Length;
+
+Console.WriteLine($"Длина слова {targetWord}: {targetLength}");
+
+foreach (string word in words)
+{
+    if (word.Length == targetLength)
+    {
+        Console.WriteLine(word);
+    }
+}
+Console.ReadKey();

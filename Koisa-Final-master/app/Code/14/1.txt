@@ -1,0 +1,119 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<Abonent> abonents = new List<Abonent>();
+        Console.Write("Введите количество абонентов: ");
+        int n = int.Parse(Console.ReadLine());
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"Абонент {i + 1}:");
+            Abonent abonent = new Abonent();
+
+            Console.Write("ФИО абонента: ");
+            abonent.Name = Console.ReadLine();
+
+            Console.Write("Номер телефона: ");
+            abonent.PhoneNumber = Console.ReadLine();
+
+            Console.Write("Адрес: ");
+            abonent.Address = Console.ReadLine();
+
+            Console.Write("Тариф со звонка: ");
+            abonent.Tariff = Console.ReadLine();
+
+            abonents.Add(abonent);
+        }
+
+        bool exit = false;
+        while (!exit)
+        {
+            Console.WriteLine("\n\tГлавное меню:");
+            Console.WriteLine("\t1. Просмотр всех абонентов");
+            Console.WriteLine("\t2. Поиск абонента");
+            Console.WriteLine("\t3. Добавление абонента");
+            Console.WriteLine("\t4. Удаление абонента");
+            Console.WriteLine("\t5. Выход");
+            Console.Write("\nВыберите действие: ");
+            int element_selection = int.Parse(Console.ReadLine());
+            switch (element_selection)
+            {
+                case 1:
+                    Console.WriteLine("\nСписок абонентов:");
+                    for (int i = 0; i < abonents.Count; i++)
+                    {
+                        Console.WriteLine($"Абонент {i + 1}:");
+                        Console.WriteLine($"ФИО абонента: {abonents[i].Name}");
+                        Console.WriteLine($"Номер телефона: {abonents[i].PhoneNumber}");
+                        Console.WriteLine($"Адрес: {abonents[i].Address}");
+                        Console.WriteLine($"Тариф со звонка: {abonents[i].Tariff}\n");
+                        Console.WriteLine();
+                    }
+                    break;
+                case 2:
+                    Console.Write("\nВведите критерий поиска (ФИО, номер телефона, адрес, тариф): ");
+                    string search_element = Console.ReadLine();
+
+                    bool found = false;
+                    for (int i = 0; i < abonents.Count; i++)
+                    {
+                        if (abonents[i].Name.Contains(search_element) ||
+                            abonents[i].PhoneNumber.Contains(search_element) ||
+                            abonents[i].Address.Contains(search_element) ||
+                            abonents[i].Tariff.Contains(search_element))
+                        {
+                            found = true;
+                            Console.WriteLine($"Абонент {i + 1}:");
+                            Console.WriteLine($"ФИО абонента: {abonents[i].Name}");
+                            Console.WriteLine($"Номер телефона: {abonents[i].PhoneNumber}");
+                            Console.WriteLine($"Адрес: {abonents[i].Address}");
+                            Console.WriteLine($"Тариф со звонка: {abonents[i].Tariff}\n");
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        Console.WriteLine("Абонент не найден.");
+                    }
+                    break;
+                case 3:
+                    Console.WriteLine("\nДобавление абонента:");
+                    Abonent newAbonent = new Abonent();
+                    Console.Write("ФИО абонента: ");
+                    newAbonent.Name = Console.ReadLine();
+                    Console.Write("Номер телефона: ");
+                    newAbonent.PhoneNumber = Console.ReadLine();
+                    Console.Write("Адрес: ");
+                    newAbonent.Address = Console.ReadLine();
+                    Console.Write("Тариф со звонка: ");
+                    newAbonent.Tariff = Console.ReadLine();
+                    Console.Write($"Введите номер места, куда добавить абонента (0 - в начало, {abonents.Count} - в конец): ");
+                    int index = int.Parse(Console.ReadLine());
+                    abonents.Insert(index, newAbonent);
+                    Console.WriteLine("Абонент успешно добавлен.");
+                    break;
+                case 4:
+                    Console.Write($"\nВведите номер места абонента, которого нужно удалить (от 1 до {abonents.Count}): "); ;
+                    int deleteIndex = int.Parse(Console.ReadLine()) - 1;
+
+                    abonents.RemoveAt(deleteIndex);
+                    Console.WriteLine("Абонент успешно удален.");
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    Console.WriteLine("Неверный выбор.");
+                    break;
+            }
+        }
+    }
+
+    class Abonent
+    {
+        public string Name;
+        public string PhoneNumber;
+        public string Address;
+        public string Tariff;
+    }
+}

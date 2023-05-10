@@ -1,0 +1,119 @@
+
+public struct Stan
+{
+    public string Name;
+    public string Tarif;
+    public string Tel;
+    public string Adres;
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        int l = 0;
+        Console.Write("Введите количество абонентов: ");    
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        Stan[] arr = new Stan[n];
+        while (l != 5)
+        {
+            Console.WriteLine("1 - Ввод данных");
+            Console.WriteLine("2 - Ввод данных из файла");
+            Console.WriteLine("3 - Просмотр данных");
+            Console.WriteLine("4 - Поиск");
+            Console.WriteLine("5 - Выход");
+            l = Convert.ToInt32(Console.ReadLine());
+            switch (l)
+            {
+                case 1:
+                    Console.WriteLine("Ввод сведений о абонентах:");
+                    Add(n, ref arr);
+                    break;
+                case 2:
+                    Console.WriteLine("Импорта данных");
+                    Imput(n, ref arr);
+                    break;
+                case 3:
+                    Console.WriteLine("Сведения о абонентах:");
+                    View(n, arr);
+                    break;
+                case 4:
+                    Console.WriteLine("Поиск");
+                    Serch(n, arr);
+                    break;
+
+            }
+        }
+    }
+    static void Add(int n, ref Stan[] arr)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write("Имя абонента: ");
+            arr[i].Name = Console.ReadLine();
+            Console.Write("Адрес абонента: ");
+            arr[i].Adres = Console.ReadLine();
+            Console.Write("Телефон абонента: ");
+            arr[i].Tel = Console.ReadLine();
+            Console.Write("Тариф абонента: ");
+            arr[i].Tarif = Console.ReadLine();
+            Console.WriteLine();
+        }
+    }
+    static void View(int n, Stan[] arr)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write("Имя абонента: " + arr[i].Name);
+            Console.Write(" | Адрес абонента: " + arr[i].Adres);
+            Console.Write(" | Телефон абонента:" + arr[i].Tel);
+            Console.Write(" | Тариф абонента:" + arr[i].Tarif);
+            Console.WriteLine();
+        }
+    }
+    static void Serch(int n, Stan[] arr)
+    {
+        Console.WriteLine("Введите номер телефона для поиска:");
+        string phoneNumber = Console.ReadLine();
+        bool found = false;
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i].Tel == phoneNumber)
+            {
+                Console.WriteLine("Абонент найден:");
+                Console.WriteLine($"имя {arr[i].Name}, адрес {arr[i].Adres}, тел {arr[i].Tel}, тар {arr[i].Tarif}");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("Абонент с таким номером телефона не найден.");
+        }
+    }
+    static void Imput(int n, ref Stan[] arr)
+    {
+        Console.WriteLine("Введите путь к файлу со списком абонентов:");
+        string filePath = Console.ReadLine();
+        try
+        {
+            string[] lines = File.ReadAllLines(filePath);
+
+            for (int i = 0; i < n; i++)
+            {
+                string[] data = lines[i].Split(',');
+                arr[i].Name = data[0];
+                arr[i].Adres = data[1];
+                arr[i].Tel = data[2];
+                arr[i].Tarif = data[3];
+            }
+
+            Console.WriteLine("Данные успешно загружены.");
+        }
+        catch
+        {
+            Console.WriteLine("Ошибка при чтении файла.");
+        }
+    }
+}

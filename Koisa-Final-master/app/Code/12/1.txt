@@ -1,0 +1,68 @@
+namespace Prosto_proggramma
+{
+    class Program
+    {
+        static void Main()
+        {
+            int[,] matrix = new int[4, 5];
+            BildMatrix(matrix);
+            Console.WriteLine("Матрица 1 без изменений");
+            DisplayMatrix(ref matrix);
+            ReverseV(matrix);
+            Console.WriteLine("Матрица (reverse относительно середины массива)(вертикально)");
+            DisplayMatrix(ref matrix);
+            Console.WriteLine("\n\n\n");
+            Console.WriteLine("Матрица 2 без изменений");
+            BildMatrix(matrix);
+            DisplayMatrix(ref matrix);
+            ReverseG(matrix);
+            Console.WriteLine("Матрица после измениения(reverse относительно середины массива)(горизонтально)");
+            DisplayMatrix(ref matrix);
+            Console.ReadKey();
+        }
+        static void BildMatrix(int[,] matrix)
+        {
+            var rnd = new Random();
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = rnd.Next(1, 10);
+                }
+            }
+        }
+        static void DisplayMatrix(ref int[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++) Console.Write(" " + matrix[i, j]);
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+        public static void ReverseV(int[,] matrix)
+        {
+            for (int rowIndex = 0; rowIndex <= (matrix.GetUpperBound(0)); rowIndex++)
+            {
+                for (int colIndex = 0; colIndex <= (matrix.GetUpperBound(1) / 2); colIndex++)
+                {
+                    int temp = matrix[rowIndex, colIndex];
+                    matrix[rowIndex, colIndex] = matrix[rowIndex, matrix.GetUpperBound(1) - colIndex];
+                    matrix[rowIndex, matrix.GetUpperBound(1) - colIndex] = temp;
+                }
+            }
+        }
+        public static void ReverseG(int[,] matrix)
+        {
+            for (int rowIndex = 0; rowIndex <= matrix.GetUpperBound(0) / 2; rowIndex++)
+            {
+                for (int colIndex = 0; colIndex <= (matrix.GetUpperBound(1)); colIndex++)
+                {
+                    int temp = matrix[rowIndex, colIndex];
+                    matrix[rowIndex, colIndex] = matrix[matrix.GetUpperBound(0) - rowIndex, colIndex];
+                    matrix[matrix.GetUpperBound(0) - rowIndex, colIndex] = temp;
+                }
+            }
+        }
+    }
+}

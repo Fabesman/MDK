@@ -1,0 +1,16 @@
+double a, b, c;
+a = Convert.ToDouble(Console.ReadLine());
+b = Convert.ToDouble(Console.ReadLine());
+if (a > b)
+{
+    Console.WriteLine("x = " + (b / (a - 1)).ToString());
+}
+else if (a == b)
+{
+    Console.WriteLine("x = -235");
+}
+else
+{
+    Console.WriteLine("x =" + ((a - 235) / b).ToString());
+}
+Console.ReadLine();

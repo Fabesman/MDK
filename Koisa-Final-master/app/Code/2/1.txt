@@ -1,0 +1,33 @@
+double boatSpeed, riverSpeed, lakeTime, riverTime, distance;
+Console.Write("Введите скорость лодки в стоячей воде (км/ч): ");
+boatSpeed = double.Parse(Console.ReadLine());
+Console.Write("Введите скорость течения реки (км/ч): ");
+riverSpeed = double.Parse(Console.ReadLine());
+Console.Write("Введите время движения лодки по озеру (ч): ");
+lakeTime = double.Parse(Console.ReadLine());
+Console.Write("Введите время движения лодки против течения реки (ч): ");
+riverTime = double.Parse(Console.ReadLine());
+double lakeDistance = boatSpeed * lakeTime;
+double riverDistance = (boatSpeed - riverSpeed) * riverTime;
+distance = lakeDistance + riverDistance;
+Console.WriteLine($"Путь, пройденный лодкой, составляет {distance} км.");
+
+Заданипе #1
+
+decimal a, b, l, s, k, S1, S2, f, r;
+Console.WriteLine("Длинна стен ");
+Console.WriteLine("a: ");
+a = decimal.Parse(Console.ReadLine());
+Console.WriteLine("b: ");
+b = decimal.Parse(Console.ReadLine());
+S1 = a * b;
+Console.WriteLine("Длинa pулoна : "); 
+l = decimal.Parse(Console.ReadLine());
+Console.WriteLine("Ширина ");
+s = decimal.Parse(Console.ReadLine());
+Console.WriteLine("Стоимость рулона ");
+k = decimal.Parse(Console.ReadLine());
+S2 = s*l;
+f = S1 / S2;
+r = f*k;
+Console.WriteLine("Обои бyдет стоить " +r);

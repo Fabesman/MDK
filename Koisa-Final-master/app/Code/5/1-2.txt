@@ -1,0 +1,25 @@
+Программа 1
+Console.WriteLine("Введите A");
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите B");
+int b = int.Parse(Console.ReadLine());
+int i = a;
+while(i <= b){
+    if(i%3==0)
+        Console.WriteLine(i);
+    i++;
+}
+Console.ReadKey();
+Программа 2
+int s = 0, x = 0, k = 0;
+Console.WriteLine("Введите стоимость товаровов по одному");
+do
+{
+    s=int.Parse(Console.ReadLine());
+    if (s >= 1000)
+    {
+        k = k + s;
+    }
+}while (s !=0);
+Console.WriteLine(k);
+Console.ReadKey();
