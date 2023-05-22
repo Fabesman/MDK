@@ -1,0 +1,14 @@
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.exe
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.deps.json
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.runtimeconfig.json
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.runtimeconfig.dev.json
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.dll
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.pdb
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.csproj.AssemblyReference.cache
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.AssemblyInfoInputs.cache
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.AssemblyInfo.cs
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.csproj.CoreCompileInputs.cache
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.dll
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.pdb
+\\KAB22-UCHITEL\op5-kab403\Группы\Черновики\ОП.04 Основы алгормизации и программрования\2ИСП 9-23\Фабисович Никита Алексеевич\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.genruntimeconfig.cache

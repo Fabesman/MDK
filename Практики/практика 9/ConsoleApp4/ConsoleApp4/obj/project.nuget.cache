@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "0qeS/fYTjijDcm/mVpEgA9WplmLhgvQ1HS1667bB5hK9Z67so6CHbN1w0ewNTAQMOyeeIOv1U3AWjHPa7e/Nmw==",
+  "success": true,
+  "projectFilePath": "E:\\Фабисович Никита Алексеевич\\практика 9\\ConsoleApp4\\ConsoleApp4\\ConsoleApp4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\smena1\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.29\\microsoft.netcore.app.host.win-x64.3.1.29.nupkg.sha512",
+    "C:\\Users\\smena1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\smena1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\smena1\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
